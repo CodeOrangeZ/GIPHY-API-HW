@@ -5,7 +5,7 @@ var ogPokemon = ["Pikachu","Squirtle","Bulbasaur","Charmander"];
 // returned results are relative
 function displayGiphy() {
 var pokemon = $(this).attr("data-name");
-var queryUrl = "http://api.giphy.com/v1/gifs/search?q=" + pokemon + "&api_key=dc6zaTOxFJmzC&limit=10";
+var queryUrl = "https://api.giphy.com/v1/gifs/search?q=" + pokemon + "&api_key=dc6zaTOxFJmzC&limit=10";
 // ajax call me maybe
 $.ajax({ url: queryUrl, method: "GET"}).done(function(response) {
 // for looping through the response allowing me to print gifs to the page
