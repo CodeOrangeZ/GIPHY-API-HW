@@ -8,6 +8,7 @@ var pokemon = $(this).attr("data-name");
 var queryUrl = "https://api.giphy.com/v1/gifs/search?q=" + pokemon + "&api_key=dc6zaTOxFJmzC&limit=10";
 // ajax call me maybe
 $.ajax({ url: queryUrl, method: "GET"}).done(function(response) {
+    $('.giphGoesHere').empty();
 // for looping through the response allowing me to print gifs to the page
     for (let i = 0; i < response.data.length; i++) {
 // variable for retrieving response data and creating HTML elements to show it on the page
